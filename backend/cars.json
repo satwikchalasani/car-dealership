@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2021,
+      "price": 25000,
+      "mileage": 10000,
+      "condition": "New",
+      "fuel_type": "Gasoline",
+      "transmission": "Automatic",
+      "color": "White",
+      "image_url": "https://example.com/car1.jpg"
+    },
+    {
+      "id": 2,
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2020,
+      "price": 20000,
+      "mileage": 15000,
+      "condition": "Used",
+      "fuel_type": "Gasoline",
+      "transmission": "Manual",
+      "color": "Black",
+      "image_url": "https://example.com/car2.jpg"
+    }
+  ]
