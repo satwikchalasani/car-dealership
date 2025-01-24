@@ -9,7 +9,7 @@ const CarDetails = () => {
   useEffect(() => {
     const fetchCarDetails = async () => {
       try {
-        const response = await axios.get(`Backend Link`);
+        const response = await axios.get(`http://localhost:5000/car/${id}`);
         setCar(response.data);
       } catch (error) {
         console.error('Error fetching car details:', error);
