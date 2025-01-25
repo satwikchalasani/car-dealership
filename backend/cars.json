@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "make": "BMW",
+      "make": "Ford",
       "model": "Mustang Ecoboost",
       "year": 2024,
       "price": 29000,
@@ -9,7 +9,7 @@
       "condition": "Used",
       "fuel_type": "Gasoline",
       "transmission": "Automatic",
-      "color": "Blue",
+      "color": "Baby Blue",
       "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/d9ad7343eae54c0484a44e7b1ed2cfc5.jpg",
       "description": "Grabber Blue Metallic 2024 Ford Mustang EcoBoost RWD 10-Speed Automatic EcoBoost 2.3L I4 GTDi DOHC Turbocharged VCT",
       "vin": "1FA6P8TH4R5106673"
@@ -43,5 +43,50 @@
         "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/cd3c9f0ad9b3416b922824c057d91887.jpg",
         "description": " Platinum Quartz Metallic 2024 Mazda CX-5 2.5 S Select Package AWD 6-Speed Automatic 2.5L I4 DOHC 16V LEV3 SULEV30 187hp",
         "vin": "JM3KFBBL6R0440965"
+    },
+    {
+        "id": 4,
+        "make": "Ford",
+        "model": "Mustang Ecoboost",
+        "year": 2016,
+        "price": 12991,
+        "mileage": 127809,
+        "condition": "Used",
+        "fuel_type": "Gasoline",
+        "transmission": "Automatic",
+        "color": "Shadow Black",
+        "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/1ebb1b6faa544c92a0ab5b83fd95bde2.jpg",
+        "description": "Shadow Black 2016 Ford Mustang EcoBoost Premium RWD 6-Speed Automatic with Select-Shift EcoBoost 2.3L I4 GTDi DOHC Turbocharged VCT",
+        "vin": "1FATP8UH3G5295802"
+    },
+    {
+        "id": 5,
+        "make": "Honda",
+        "model": "Civic",
+        "year": 2022,
+        "price": 22991,
+        "mileage": 57492,
+        "condition": "Pre-Owned",
+        "fuel_type": "Gasoline",
+        "transmission": "Automatic",
+        "color": "Aegean Blue",
+        "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/8208fe8d45874bf38a174667d20dfcaa.jpg",
+        "description": "Aegean Blue Metallic 2022 Honda Civic Sport FWD CVT 2.0L I4 DOHC 16V i-VTEC",
+        "vin": "2HGFE2F57NH558071"
+    },
+    {
+        "id": 6,
+        "make": "Mazda",
+        "model": "CX-50",
+        "year": 2024,
+        "price": 28492,
+        "mileage": 5077,
+        "condition": "New",
+        "fuel_type": "Gasoline",
+        "transmission": "Automatic",
+        "color": "Soul Red",
+        "image_url": "https://content.homenetiol.com/2000157/2065512/0x0/233a71b032e34a56a2af85da6314a1ee.jpg",
+        "description": "Soul Red Crystal Metallic 2024 Mazda CX-50 2.5 S Preferred Package AWD 6-Speed Automatic SKYACTIV® 2.5L 4-Cylinder DOHC 16V",
+        "vin": "7MMVABBM5RN219826"
     }
   ]
