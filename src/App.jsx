@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CarList from './CarList';
+import CarList from './Cars';
 import CarDetails from './CarDetails';
 
 const App = () => {

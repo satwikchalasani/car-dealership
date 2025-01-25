@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "./index.css"
 
 const CarList = () => {
   const [cars, setCars] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/cars`);
+        const response = await axios.get(`http://localhost:3001/cars`);
         setCars(response.data);
       } catch (error) {
         console.error('Error fetching cars:', error);
@@ -18,19 +20,32 @@ const CarList = () => {
     fetchCars();
   }, []);
 
+  const handleDetailsClick = (id) => {
+    navigate(`/car/${id}`);
+  };
+
+
   return (
-    <div>
-      <h1>Car Inventory</h1>
-      <ul>
+    <div className="container">
+        <h1 className="title">Convergent Car Dealership</h1>
+        <div className="grid">
         {cars.map((car) => (
-          <li key={car.id}>
-            <Link to={`/car/${car.id}`}>
-              <img src={car.image_url} alt={`${car.make} ${car.model}`} />
-              <p>{car.make} {car.model} - ${car.price}</p>
-            </Link>
-          </li>
+            <div key={car.id} className="card">
+            <img
+                src={car.image_url}
+                alt={`${car.make} ${car.model}`}
+                className="card-image"
+            />
+            <div className="card-info">
+                <h2>{`${car.year} ${car.make} ${car.model}`}</h2>
+                <p>Price: ${car.price.toLocaleString()}</p>
+                <p>Condition: {car.condition}</p>
+                <p>Mileage: {car.mileage.toLocaleString()} miles</p>
+            </div>
+            <button onClick={() => handleDetailsClick(car.id)} className='details-button'>More Details</button>
+            </div>
         ))}
-      </ul>
+        </div>
     </div>
   );
 };
