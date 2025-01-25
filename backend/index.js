@@ -17,6 +17,8 @@ app.get('/cars', (req, res) => {
 app.get('/car/:id', (req, res) => {
     const carId = parseInt(req.params.id);
     const car = cars.find(c => c.id === carId);
+
+    console.log(car)
     
     if (car) {
       return res.json(car);

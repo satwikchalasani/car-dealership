@@ -5,19 +5,30 @@ import axios from "axios";
 const CarDetails = () => {
   const { id } = useParams();
   const [car, setCar] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCarDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/car/${id}`); 
+        const response = await axios.get(`http://localhost:3001/car/${id}`);
         setCar(response.data);
       } catch (error) {
         console.error("Error fetching car details:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchCarDetails();
   }, [id]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!car) {
+    return <div>Car not found</div>;
+  }
 
 
   return (

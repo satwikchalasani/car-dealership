@@ -83,7 +83,7 @@ const CarList = () => {
           <select
             id="sort-direction"
             value={sortDirection}
-            onChange={(e) => setSortDirection(e.target.value)}
+            onChange={(e) => handleSortChange(sortKey, e.target.value)}
           >
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
