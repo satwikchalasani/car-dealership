@@ -23,6 +23,22 @@ app.get('/car/:id', (req, res) => {
     } else {
       res.status(404).json({ error: 'Car not found' });
     }
+});
+
+app.get('/cars/sort', (req, res) => {
+    const { direction, key } = req.query;
+
+    if (!direction || !key) {
+      return res.status(400).json({ message: 'Direction and key are required' });
+    }
+  
+    const sortedCars = cars.sort((a, b) => {
+      if (a[key] < b[key]) return direction === 'asc' ? -1 : 1;
+      if (a[key] > b[key]) return direction === 'asc' ? 1 : -1;
+      return 0;
+    });
+  
+    return res.json(sortedCars);
   });
 
 app.listen(PORT, () => {

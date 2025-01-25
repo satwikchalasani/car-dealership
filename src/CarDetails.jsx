@@ -5,7 +5,6 @@ import axios from "axios";
 const CarDetails = () => {
   const { id } = useParams();
   const [car, setCar] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCarDetails = async () => {
@@ -14,17 +13,12 @@ const CarDetails = () => {
         setCar(response.data);
       } catch (error) {
         console.error("Error fetching car details:", error);
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchCarDetails();
   }, [id]);
 
-  if (loading) return <p>Loading car details...</p>;
-
-  if (!car) return <p>Car details not found!</p>;
 
   return (
     <div className="car-details-container">
